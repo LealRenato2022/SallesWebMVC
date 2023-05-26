@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SalesWebMVC.Models;
+using SalesWebMVC.Models.ViewModels;
 using System.Diagnostics;
+
 
 namespace SalesWebMVC.Controllers {
     public class HomeController : Controller {
@@ -12,12 +13,17 @@ namespace SalesWebMVC.Controllers {
 
         public IActionResult Index() {
             ViewData["Massage"] = "Salles Web MVC App from C# Coursel";
-            ViewData["Dev"] = "Renato Vale Leal";
+            ViewData["Dev"] = "Renato Vale Leall";
             return View();
            
         }
 
         public IActionResult Privacy() {
+            ViewData["Nome"] = "Marli Evangelista de Freiras";
+            return View();
+        }
+        public IActionResult Depatamet()
+        {
             ViewData["Nome"] = "Marli Evangelista de Freiras";
             return View();
         }
